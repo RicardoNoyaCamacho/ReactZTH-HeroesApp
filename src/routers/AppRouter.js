@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
@@ -8,7 +8,7 @@ import { DashboardRoutes } from "./DashboardRoutes";
 
 export const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route
           path="/login"
@@ -29,6 +29,6 @@ export const AppRouter = () => {
         />
         {/* <Route path="/*" element={<DashboardRoutes />} /> */}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
